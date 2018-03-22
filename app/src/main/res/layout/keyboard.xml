@@ -53,6 +53,30 @@
 
     <Row>
         <Key
+            android:codes="64"
+            android:horizontalGap="4%p"
+            android:keyLabel="a" />
+        <Key
+            android:codes="b"
+            android:horizontalGap="4%p"
+            android:keyLabel="b" />
+        <Key
+            android:codes="c"
+            android:horizontalGap="4%p"
+            android:keyLabel="c" />
+        <Key
+            android:codes="d"
+            android:horizontalGap="4%p"
+            android:keyLabel="d" />
+        <Key
+            android:codes="e"
+            android:horizontalGap="4%p"
+            android:keyLabel="e" />
+
+    </Row>
+
+    <Row>
+        <Key
             android:codes="-1"
             android:horizontalGap="4%p"
             android:keyWidth="34%p" />

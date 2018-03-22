@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:hint="Caren"
+        android:id="@+id/input"
         android:layout_height="wrap_content" />
 
     <android.inputmethodservice.KeyboardView

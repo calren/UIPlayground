@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 /**
  * Activity to play around with building a custom keyboard to see what's possible and not possible
@@ -21,6 +22,8 @@ public class KeyboardActivity extends Activity {
     Keyboard mKeyboard;
     KeyboardView mKeyboardView;
 
+    EditText mEditText;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,8 @@ public class KeyboardActivity extends Activity {
         View parent = getLayoutInflater().inflate(R.layout.activity_keyboard, null);
 
         setContentView(parent);
+
+        mEditText = findViewById(R.id.input);
 
         // Create the Keyboard
         mKeyboard = new Keyboard(this, R.layout.keyboard);
@@ -63,6 +68,17 @@ public class KeyboardActivity extends Activity {
                     //based on the android:codes property
                     if (primaryCode == 1) {
                         Log.i("Key", "You just pressed 1 button");
+                    }
+
+                    String a = "a";
+                    Integer.getInteger(a);
+
+                    String current = mEditText.getText().toString();
+
+                    if (primaryCode == 64) {
+                        mEditText.setText(current + "a");
+                    } else {
+                        mEditText.setText(current + primaryCode);
                     }
                 }
 
